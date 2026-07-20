@@ -4,11 +4,23 @@ import Image from "next/image";
 
 const Challenge = () => {
   const stats = [
-    { v: "65%", l: "of Africa's land is affected by degradation" },
-    { v: "500M", l: "people depend on dryland ecosystems" },
-    { v: "3B", l: "tonnes of topsoil lost annually" },
-    { v: "40yr", l: "to form a single centimetre of soil" },
-  ];
+  {
+    v: "65%",
+    l: "of Africa's land is affected by degradation",
+  },
+  {
+    v: "500M+",
+    l: "people depend on Africa's dryland ecosystems",
+  },
+  {
+    v: "24B",
+    l: "tonnes of fertile soil are lost to erosion globally each year",
+  },
+  {
+    v: "100ha",
+    l: "our restoration target by 2036",
+  },
+];
   return (
     <section className="relative py-32 md:py-44 bg-ink text-cream overflow-hidden">
       <div className="absolute inset-0 opacity-70">
@@ -26,24 +38,25 @@ const Challenge = () => {
         <div className="absolute inset-0 bg-linear-to-b from-ink via-ink/70 to-ink" />
       </div>
       <div className="relative mx-auto max-w-7xl px-6 lg:px-10">
-        <div className="grid lg:grid-cols-2 gap-16 items-end mb-20">
+        <div className="grid lg:grid-cols-2 gap-16 items-center mb-20">
           <Reveal>
             <div>
               <p className="text-sand/80 text-xs tracking-[0.3em] uppercase mb-6">
-                The Challenge
+                Why It Matters
               </p>
               <h2 className="font-display text-[clamp(2rem,4.5vw,3.75rem)] leading-[1.05] text-balance">
-                Africa's drylands are quietly disappearing.
+                Healthy soils are the foundation of food, livelihoods, and climate resilience.
               </h2>
             </div>
           </Reveal>
           <Reveal delay={150}>
-            <p className="text-cream/80 text-lg md:text-right leading-relaxed max-w-xl lg:justify-self-end">
-              Climate change, over-cultivation, and neglect are erasing the
-              living layer of earth that sustains half a billion people.
-              Restoration is no longer optional it is the defining task of our
-              generation.
-            </p>
+           <p className="text-cream/80 text-lg md:text-right leading-relaxed max-w-xl lg:justify-self-end">
+  Dryland soils sustain millions of people, yet they face growing pressure
+  from land degradation, climate change, and unsustainable land use. By
+  restoring soil health through science, farmer empowerment, and
+  agroecological practices, we can strengthen ecosystems, improve food
+  security, and build resilient communities for generations to come.
+</p>
           </Reveal>
         </div>
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-px bg-cream/10 rounded-3xl overflow-hidden border border-cream/10">

@@ -43,18 +43,18 @@ const Footer = () => {
                   Solutions
                 </Link>
               </li>
-              <li>
+              {/* <li>
                 <Link
                   className="hover:text-cream transition-colors"
                   href="/about"
                 >
                   About & Impact
                 </Link>
-              </li>
+              </li> */}
               <li>
                 <Link
                   className="hover:text-cream transition-colors"
-                  href="/about#contact"
+                  href="/solutions#contact"
                 >
                   Contact
                 </Link>

@@ -41,10 +41,10 @@ export default function Navbar({ overHero = false }: NavbarProps) {
       label: "Solutions",
       href: "/solutions",
     },
-    {
-      label: "About & Impact",
-      href: "/about",
-    },
+    // {
+    //   label: "About & Impact",
+    //   href: "/about",
+    // },
   ];
 
   return (
@@ -69,7 +69,7 @@ export default function Navbar({ overHero = false }: NavbarProps) {
         </Link>
         {/* Desktop Navigation */}
         <nav
-          className={`hidden items-center gap-9 text-lg md:flex ${
+          className={`hidden items-center gap-9 text-md md:flex ${
             light ? "text-cream/90" : "text-foreground/80"
           }`}
         >
@@ -90,7 +90,7 @@ export default function Navbar({ overHero = false }: NavbarProps) {
 
         {/* CTA */}
         <Link
-          href="/about#contact"
+          href="/solutions#contact"
           className={`hidden rounded-full px-5 py-2.5 text-sm transition-all md:inline-flex ${
             light
               ? "bg-cream/95 text-forest hover:bg-cream"
@@ -130,7 +130,7 @@ export default function Navbar({ overHero = false }: NavbarProps) {
             ))}
 
             <Link
-              href="/about#contact"
+              href="/solutions#contact"
               onClick={() => setOpen(false)}
               className="mt-2 inline-flex items-center justify-center rounded-full bg-forest px-5 py-2.5 text-cream"
             >

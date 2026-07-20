@@ -1,3 +1,6 @@
+
+import ContactSection from "@/components/about/Contact";
+import FAQ from "@/components/about/FAQ";
 import PageHero from "@/components/PageHero";
 import CTASection from "@/components/solutions/Cta";
 import ServiceBlock, {
@@ -6,153 +9,152 @@ import ServiceBlock, {
 import {
   BookOpen,
   CloudSun,
+  Factory,
   FlaskConical,
   GraduationCap,
   Megaphone,
   Sprout,
-  type LucideIcon,
 } from "lucide-react";
-import { type StaticImageData } from "next/image";
-import React from "react";
+import { StaticImageData } from "next/image";
 
 const staticImage = (src: string) => src as unknown as StaticImageData;
 
-const page = () => {
+export default function Page() {
   const services: Service[] = [
     {
       id: "advocacy",
       icon: Megaphone,
-      title: "Advocacy",
-      tagline: "Making soil a matter of public record.",
-      body: "We turn scientific evidence into legislation, standing with communities in ministries, parliaments, and international forums to ensure dryland soils are named, protected, and funded.",
-      points: [
-        "National soil health frameworks",
-        "Coalition-building across ministries",
-        "Public campaigns and media briefings",
+      title: "Dryland Soil Advocacy",
+      tagline: "Championing healthy soils for resilient communities.",
+      body:
+        "We champion the potential of Africa's dryland soils through advocacy, storytelling, strategic partnerships, and evidence-based engagement. By amplifying farmers' voices and promoting sustainable land management, we influence policies and investments that protect soils and strengthen food systems.",
+      offerings: [
+        "Dryland soil advocacy campaigns",
+        "Farmer and community storytelling",
+        "Policy dialogue and stakeholder engagement",
+        "Awareness programmes on sustainable land management",
+        "Knowledge sharing and public education",
       ],
       image: staticImage("/farmer-soil.jpg"),
-      caseTitle: "A national soil health bill, drafted with farmers.",
-      caseLocation: "Nairobi, Kenya",
-      caseBody:
-        "Working with 34 farmer cooperatives, we co-authored the first national framework recognising dryland soil as critical infrastructure.",
-      metric: { v: "34", l: "Cooperatives at the table" },
     },
+
     {
       id: "training",
       icon: GraduationCap,
-      title: "Regenerative Agriculture Training",
-      tagline: "Field schools rooted in local wisdom.",
-      body: "Season-long farmer field schools that combine ancestral practice with modern regenerative science — cover cropping, composting, agroforestry, and holistic land management.",
-      points: [
-        "Full-season farmer field schools",
-        "Train-the-trainer for extension officers",
-        "Curricula co-designed with elders",
+      title: "Farmer Training & Capacity Building",
+      tagline: "Empowering farmers through knowledge and practical skills.",
+      body:
+        "Healthy soils begin with informed farmers. We deliver practical training in regenerative agriculture, climate-smart farming, organic soil fertility management, and sustainable production systems that improve productivity while restoring the land.",
+      offerings: [
+        "Climate-smart agriculture training",
+        "Regenerative farming practices",
+        "Organic soil fertility management",
+        "Farmer field demonstrations",
+        "Capacity building for farmer groups and institutions",
       ],
       image: staticImage("/training.jpg"),
-      caseTitle: "1,200 farmers, one growing season.",
-      caseLocation: "Sahel, Burkina Faso",
-      caseBody:
-        "Zaï pits and cover crops introduced in three districts lifted average yields 38% while restoring topsoil in a single season.",
-      metric: { v: "+38%", l: "Average yield gain" },
     },
+
     {
       id: "testing",
       icon: FlaskConical,
-      title: "Soil Testing & Analysis",
-      tagline: "Diagnosis before prescription.",
-      body: "Accredited laboratory work and on-farm mobile diagnostics give every farm, cooperative, and researcher a clear, honest picture of what the soil holds — and what it needs.",
-      points: [
-        "ISO-aligned lab analysis",
-        "Mobile field-testing units",
-        "Farmer-friendly soil reports",
+      title: "Soil Sampling, Testing & Analysis",
+      tagline: "Better information. Better decisions. Better yields.",
+      body:
+        "Every productive farm starts with understanding the soil. We provide professional soil sampling, laboratory testing, analysis, and practical recommendations that help farmers improve soil health, optimise nutrient use, and increase crop productivity.",
+      offerings: [
+        "Professional soil sampling",
+        "Laboratory soil analysis",
+        "Comprehensive soil health reports",
+        "Crop-specific nutrient recommendations",
+        "Soil fertility monitoring",
       ],
       image: staticImage("/soil-hands.jpg"),
-      caseTitle: "The mobile lab that reached Adwa.",
-      caseLocation: "Tigray, Ethiopia",
-      caseBody:
-        "Our mobile soil unit delivered 1,200 first-ever soil reports across five woredas — turning guesswork into precision.",
-      metric: { v: "1,200", l: "Soil reports issued" },
     },
+
     {
-      id: "agroecology",
+      id: "solutions",
       icon: Sprout,
-      title: "Agroecological Soil Solutions",
-      tagline: "Restoration written for each landscape.",
-      body: "Bespoke, science-led restoration plans — biological inputs, cover crops, agroforestry, and water-smart design — matched to climate, culture, and crop.",
-      points: [
-        "Whole-farm restoration plans",
-        "Biological input programmes",
-        "Agroforestry and water design",
+      title: "Organic Soil Solutions",
+      tagline: "Restoring soils naturally for sustainable production.",
+      body:
+        "We provide environmentally friendly soil restoration solutions that improve soil fertility, water retention, biological activity, and long-term productivity. Our solutions are tailored to the needs of farmers across dryland regions.",
+      offerings: [
+        "Organic fertilizer solutions",
+        "Biochar soil amendment",
+        "Frass fertilizer recommendations",
+        "Well-decomposed organic manure",
+        "Farm-specific soil restoration plans",
       ],
-      image: staticImage("/farmer-soil.jpg"),
-      caseTitle: "Two hectares brought back to life.",
-      caseLocation: "Turkana, Kenya",
-      caseBody:
-        "A grandmother's silent field returned to millet, sorghum, and birdsong after three seasons of cover crops and biochar.",
-      metric: { v: "3", l: "Seasons to recovery" },
+      image: staticImage("/hero-dryland.jpg"),
     },
+
     {
-      id: "climate",
+      id: "consultancy",
       icon: CloudSun,
-      title: "Climate-Smart Agriculture Consultancy",
-      tagline: "Farming systems built for a changing climate.",
-      body: "Advisory for governments, cooperatives, and commercial farms designing production systems that sequester carbon, hold water, and stay resilient under drought.",
-      points: [
-        "Climate-risk farm audits",
-        "Carbon and water accounting",
-        "Adaptation roadmaps",
+      title: "Agricultural Advisory & Consultancy",
+      tagline: "Technical guidance for resilient and profitable farming.",
+      body:
+        "We support farmers, cooperatives, organisations, NGOs, and institutions with professional agricultural advisory services that promote sustainable farming, climate resilience, and improved farm performance.",
+      offerings: [
+        "Farm planning and management",
+        "Climate-smart agriculture advisory",
+        "Organic input recommendations",
+        "Project implementation support",
+        "Monitoring, evaluation and learning",
       ],
       image: staticImage("/aerial-regeneration.jpg"),
-      caseTitle: "A drought playbook for a cooperative.",
-      caseLocation: "Northern Uganda",
-      caseBody:
-        "An 800-farm cooperative adopted our climate-smart playbook and held yields steady through the driest season on record.",
-      metric: { v: "800", l: "Farms advised" },
     },
+
     {
       id: "research",
       icon: BookOpen,
-      title: "Research & Policy",
-      tagline: "Evidence that governments can act on.",
-      body: "Peer-reviewed studies, open datasets, and policy briefs that give decision-makers the clarity to invest in soil — and the language to defend it.",
-      points: [
-        "Long-term field trials",
-        "Open soil health datasets",
-        "Policy briefs and white papers",
+      title: "Research, Innovation & Knowledge",
+      tagline: "Transforming evidence into practical solutions.",
+      body:
+        "We generate and share practical knowledge that bridges science and farming. Through research, innovation, documentation, and collaboration, we develop evidence-based solutions that improve soil health, farming systems, and livelihoods across Africa's drylands.",
+      offerings: [
+        "Applied soil and agriculture research",
+        "Knowledge documentation and publications",
+        "Innovation in regenerative agriculture",
+        "Partnerships with research institutions",
+        "Learning resources for farmers and practitioners",
       ],
-      image: staticImage("/soil-hands.jpg"),
-      caseTitle: "A dataset the continent could share.",
-      caseLocation: "Pan-African",
-      caseBody:
-        "Our open dryland soil database now underpins programmes in eleven countries and three multilateral agencies.",
-      metric: { v: "11", l: "Countries using our data" },
+      image: staticImage("/training.jpg"),
     },
   ];
+
   return (
-    <main className="flex flex-col  bg-cream text-foreground">
+    <main className="flex flex-col bg-cream text-foreground">
       <PageHero
-        eyebrow="What We Do"
+        eyebrow="Our Work"
         title={
           <>
-            Restoring Africa's drylands.
+            Healthy soils,
             <br />
-            <p className="text-sand">
-              Creating impact that lasts generations.
-            </p>
+            <span className="text-sand">Resilient farms,</span>
+            <br />
+            Better futures.
           </>
         }
-        lede="The Voice of Dryland Soils delivers integrated solutions that connect scientific research, regenerative agriculture, policy influence, and community action. By restoring soil health, we strengthen food systems, improve climate resilience, unlock sustainable livelihoods, and create scalable opportunities for investment across Africa's drylands."
+        lede="The Voice of Dryland Soils provides integrated soil health solutions from advocacy and storytelling to soil testing, farmer capacity building, climate-smart agriculture, and agroecological restoration helping farmers build productive, profitable, and resilient farming systems."
         image="/aerial-regeneration.jpg"
         imageAlt="Aerial view of regenerating drylands"
       />
 
       {services.map((service, index) => (
-        <ServiceBlock key={service.id} service={service} index={index} />
+        <ServiceBlock
+          key={service.id}
+          service={service}
+          index={index}
+        />
       ))}
+      
 
       <CTASection />
+      <FAQ/>
+      <ContactSection/>
+
     </main>
   );
-};
-
-export default page;
+}

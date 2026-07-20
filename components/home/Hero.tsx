@@ -22,7 +22,7 @@ export default function Hero() {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 mx-auto flex min-h-screen max-w-7xl flex-col px-6  py-16 lg:px-10">
+      <div className="relative z-10 mx-auto flex min-h-screen max-w-7xl flex-col px-6  py-16 lg:px-12">
         <div className="flex flex-1 items-center pt-32 pb-16">
           <div className="max-w-4xl">
             <p className="mb-6 animate-rise text-sm uppercase tracking-[0.28em] text-cream/80">
@@ -33,18 +33,16 @@ export default function Hero() {
               className="animate-rise font-display text-[clamp(2.75rem,7vw,6.5rem)] leading-[0.95] text-balance"
               style={{ animationDelay: "150ms" }}
             >
-              Giving Dryland Soils{" "}
-              <p className="text-sand/95">the Voice</p>{" "}
-              They Deserve.
+          Potential of the{" "}
+              
+              Dryland Soils.
             </h1>
 
             <p
               className="mt-8 max-w-xl animate-rise text-lg font-light leading-relaxed text-cream/85 md:text-xl"
               style={{ animationDelay: "350ms" }}
             >
-              We are Africa&apos;s leading movement for dryland soil restoration 
-              uniting farmers, scientists, and policymakers to regenerate the
-              land that feeds a continent.
+              The Voice of Dryland Soils is a soil-centred agricultural social enterprise that integrates story-telling, regenerative agriculture training, climate-smart agricultural consultancy, and evidence-based soil health science to restore and strengthen dryland ecosystems and beyond. 
             </p>
 
             <div

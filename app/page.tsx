@@ -1,4 +1,6 @@
 import Testimonials from "@/components/about/Testimonials";
+import Values from "@/components/about/Values";
+import Vision from "@/components/about/Vision";
 import Challenge from "@/components/home/Challenge";
 import CTA from "@/components/home/CTA";
 
@@ -16,7 +18,9 @@ export default function Home() {
     <Challenge/>
     
     <FeaturedServices/>
-    <Testimonials/>
+    <Vision />
+          {/* <Values /> */}
+    {/* <Testimonials/> */}
     {/* <Impact/> */}
     <CTA/>
    </div>

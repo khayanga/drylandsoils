@@ -1,28 +1,25 @@
-
-
 import { Reveal } from "../Reveal";
 
 const pillars = [
   {
     number: "01",
-    title: "Rooted in Science",
+    title: "Advocacy & Storytelling",
     description:
-      "Every recommendation begins in the lab and ends in the field. We publish, measure, and defend what works.",
+      "We document and share stories that showcase the potential of dryland soils, inspire sustainable farming, and contribute to soil-centred advocacy and policy dialogue across dryland regions.",
   },
   {
     number: "02",
-    title: "Led by Farmers",
+    title: "Farmer Empowerment",
     description:
-      "The people who steward the drylands are the true experts. Every programme is designed alongside them—not for them.",
+      "Through education, capacity building, technical advisory, and climate-smart agriculture training, we equip farmers with the knowledge and skills needed for resilient and profitable dryland farming.",
   },
   {
     number: "03",
-    title: "Built for Scale",
+    title: "Soil Restoration",
     description:
-      "From a single hectare to national policy, we create restoration systems that endure across generations.",
+      "We conduct soil testing, identify soil health gaps, and provide tailored agroecological and regenerative solutions that restore degraded soils and strengthen farming systems for future generations.",
   },
 ];
-
 export default function Intro() {
   return (
     <section className="bg-cream py-24 md:py-32">
@@ -32,14 +29,14 @@ export default function Intro() {
           <div className="lg:col-span-7">
             <Reveal>
               <p className="mb-6 text-xs font-semibold uppercase tracking-[0.35em] text-earth">
-                The Brand
+                Who We Are
               </p>
             </Reveal>
 
             <Reveal delay={100}>
-              <h2 className="font-display text-[clamp(2.3rem,5vw,4.8rem)] leading-[1.05] text-balance">
-                Beneath every harvest is a
-                <span className="text-forest"> story of soil.</span>
+              <h2 className="font-display text-[clamp(2.3rem,5vw,4.8rem)] leading-[1.05]  md:max-w-lg text-balance">
+                Dryland soils are not only hungry
+                <span className="text-forest"> but thirsty.</span>
               </h2>
             </Reveal>
           </div>
@@ -47,10 +44,12 @@ export default function Intro() {
           <div className="lg:col-span-5">
             <Reveal delay={200}>
               <p className="max-w-xl md:text-right text-base leading-8 text-muted-foreground md:text-lg">
+                The Voice of Dryland Soils is a soil-centred agricultural social
+                enterprise dedicated to restoring and strengthening dryland
+                ecosystems through storytelling, regenerative agriculture,
+                climate-smart solutions, soil science, and farmer empowerment.
                 We believe healthy soils are the foundation of resilient
-                communities. Through science, advocacy, and farmer-led
-                innovation, we restore landscapes while strengthening the
-                people who depend on them.
+                communities, sustainable food systems, and a better future.
               </p>
             </Reveal>
           </div>

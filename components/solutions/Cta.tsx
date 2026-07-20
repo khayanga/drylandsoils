@@ -2,7 +2,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 
-
 export default function CTASection() {
   return (
     <section className="relative overflow-hidden bg-forest py-32 text-cream md:py-40">
@@ -21,21 +20,27 @@ export default function CTASection() {
 
       {/* Content */}
       <div className="relative mx-auto max-w-4xl px-6 text-center lg:px-10">
-        <h2 className="font-display text-[clamp(2rem,4.5vw,4rem)] leading-[1.05] text-balance">
-          Every restoration begins with a conversation.
+        <p className="mb-6 text-xs uppercase tracking-[0.35em] text-sand">
+          Work With Us
+        </p>
+
+        <h2 className="font-display text-[clamp(2.5rem,5vw,4.5rem)] leading-[1.05]">
+          Let's restore
+          <br />
+          Africa's soils together.
         </h2>
 
         <p className="mx-auto mt-8 max-w-2xl text-lg leading-relaxed text-cream/85">
-          Tell us about your land, your community, or your policy. We'll answer
-          with a plan that starts where you are.
+          From soil testing and farmer training to advocacy, research, and
+          agroecological solutions, we partner with communities, organisations,
+          governments, and development partners to regenerate dryland ecosystems
+          and build resilient agricultural futures.
         </p>
-
         <Link
           href="/about#contact"
           className="mt-10 inline-flex items-center gap-2 rounded-full bg-cream px-7 py-4 text-sm font-medium text-forest transition-colors hover:bg-sand"
         >
-          Start a conversation
-          <ArrowRight className="h-4 w-4" />
+          Request a Consultation
         </Link>
       </div>
     </section>

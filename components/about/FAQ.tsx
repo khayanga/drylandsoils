@@ -72,7 +72,7 @@ export default function FAQ() {
           </p>
 
           <Link
-            href="/about#contact"
+            href="/solutions#contact"
             className="mt-10 inline-flex items-center gap-2 rounded-full bg-forest px-6 py-3 text-sm text-cream transition hover:bg-forest/90"
           >
             Contact our team
@@ -146,7 +146,7 @@ export default function FAQ() {
             </p>
 
             <Link
-              href="/about#contact"
+              href="/solutions#contact"
               className="mt-6 inline-flex items-center gap-2 text-forest"
             >
               Get in touch

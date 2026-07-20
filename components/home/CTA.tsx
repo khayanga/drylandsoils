@@ -25,7 +25,7 @@ const CTA = () => {
         </Reveal>
         <Reveal delay={280}>
           <p className="mt-10 text-cream/85 text-lg md:text-xl leading-relaxed max-w-2xl mx-auto">
-            Join the movement as a partner, a farmer, or a funder and help
+            Collaboarate with us as a partner, a farmer, or a funder and help
             write the next chapter of Africa's soil story.
           </p>
         </Reveal>

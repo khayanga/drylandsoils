@@ -27,8 +27,7 @@ const page = () => {
       />
 
       <Story />
-      <Vision />
-      <Values />
+      
       <Impact />
       {/* <Partners /> */}
       {/* <Testimonials/> */}

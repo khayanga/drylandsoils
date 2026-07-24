@@ -1,3 +1,4 @@
+
 import { Eye, Compass } from "lucide-react";
 import { Reveal } from "../Reveal";
 
@@ -5,29 +6,33 @@ const content = [
   {
     label: "Vision",
     icon: Eye,
-    heading:
-      "Healthy soils. Resilient farms. Better future.",
+    // heading: "Healthy soils. Resilient farms. Better futures.",
     description:
-      "To strengthen soil health, build resilient farming systems, and create a future where dryland ecosystems sustain prosperous communities, thriving biodiversity, and food security for generations.",
+      "To be a leading social enterprise for dryland soil soulutions and advocacy.",
   },
   {
     label: "Mission",
     icon: Compass,
-    heading:
-      "Restoring dryland ecosystems through science, knowledge, and action.",
+    // heading: "Turning science into restoration.",
     description:
-      "To regenerate 100 hectares of degraded dryland soils by 2036 by equipping farmers with regenerative agriculture, climate-smart agriculture (CSA), agroecological solutions, soil science, and practical knowledge that enable sustainable and profitable farming.",
+      "To regenerate hacters of degraded dryland soils while enabling farmers to produce sustainably and profitably through regenerative agriculture, CSA and Agroecology.",
   },
 ];
 
 export default function Vision() {
   return (
-    <section className="relative overflow-hidden bg-linear-to-b from-sand/30 to-cream py-32">
-      <Reveal>
-        <div className="mx-auto max-w-7xl px-6 lg:px-10">
-          {/* Section Heading */}
-          <div className="mx-auto mb-20 max-w-3xl text-center">
-            <p className="mb-5 text-sm font-bold uppercase tracking-[0.35em] text-earth">
+    <section className="relative overflow-hidden bg-cream py-32 md:py-40">
+      {/* Decorative Background */}
+      <div className="absolute inset-0">
+        <div className="absolute left-0 top-20 h-96 w-96 rounded-full bg-forest/5 blur-[120px]" />
+        <div className="absolute right-0 bottom-10 h-112 w-md rounded-full bg-earth/5 blur-[140px]" />
+      </div>
+
+      <div className="relative mx-auto max-w-7xl px-6 lg:px-10">
+        {/* Heading */}
+
+        <div className="mx-auto mb-24 max-w-4xl text-center">
+           <p className="mb-5 text-sm font-bold uppercase tracking-[0.35em] text-earth">
               Our Purpose
             </p>
 
@@ -43,51 +48,53 @@ export default function Vision() {
               restoring degraded landscapes and building resilient farming communities
               across Africa.
             </p>
-          </div>
+        </div>
 
-          {/* Cards */}
-          <div className="grid gap-8 lg:grid-cols-2">
-            {content.map((item) => {
-              const Icon = item.icon;
+        {/* Cards */}
 
-              return (
-                <div
-                  key={item.label}
-                  className="group relative overflow-hidden rounded-4xl border border-border/60 bg-white p-10 transition-all duration-500 hover:-translate-y-2 hover:border-forest/20 hover:shadow-[0_30px_80px_-30px_rgba(22,61,48,.18)]"
-                >
-                  {/* Accent */}
-                  <div className="absolute left-0 top-0 h-1 w-full bg-linear-to-r from-forest via-olive to-earth scale-x-0 origin-left transition-transform duration-500 group-hover:scale-x-100" />
+        <div className="grid gap-10 lg:grid-cols-2">
+          {content.map((item, index) => {
+            const Icon = item.icon;
 
-                  {/* Background Glow */}
-                  <div className="absolute -right-20 -top-20 h-52 w-52 rounded-full bg-forest/5 blur-3xl transition-all duration-500 group-hover:bg-forest/10" />
+            return (
+              <Reveal key={item.label} delay={index * 120}>
+                <div className="group relative overflow-hidden rounded-4xl border border-border/60 bg-white/80 p-10 backdrop-blur-sm transition-all duration-500 hover:-translate-y-3 hover:border-forest/20 hover:shadow-[0_30px_80px_rgba(15,90,23,0.12)]">
+
+
+                  <div className="absolute left-0 top-0 h-full w-1 bg-linear-to-b from-forest via-leaf to-earth scale-y-0 origin-top transition-transform duration-500 group-hover:scale-y-100" />
 
                   {/* Icon */}
-                  <div className="mb-8 flex h-16 w-16 items-center justify-center rounded-2xl bg-forest/10 text-forest transition-all duration-500 group-hover:scale-110 group-hover:bg-forest group-hover:text-cream">
-                    <Icon strokeWidth={1.5} className="h-8 w-8" />
+
+                  <div className="mb-8 flex h-18 w-18 items-center justify-center rounded-3xl bg-linear-to-br from-forest to-leaf text-white shadow-lg transition-all duration-500 group-hover:scale-110 group-hover:rotate-6">
+                    <Icon
+                      strokeWidth={1.5}
+                      className="h-8 w-8"
+                    />
                   </div>
 
-                  <p className="mb-5 text-xs uppercase tracking-[0.35em] text-earth">
+                  {/* <p className="mb-5 text-xs uppercase tracking-[0.35em] text-earth">
                     {item.label}
-                  </p>
+                  </p> */}
 
-                  <h3 className="font-display text-2xl leading-tight text-balance">
-                    {item.heading}
-                  </h3>
+                  
 
-                  <p className="mt-6 leading-relaxed text-lg text-muted-foreground">
+                  <p className="mt-6 text-lg leading-8 text-muted-foreground">
                     {item.description}
                   </p>
 
-                  {/* Decorative line */}
-                  <div className="mt-10 h-px w-20 bg-earth/30 transition-all duration-500 group-hover:w-36 group-hover:bg-forest" />
+                  <div className="mt-10 flex items-center gap-3">
+                    <div className="h-px flex-1 bg-border transition-all duration-500 group-hover:bg-forest/30" />
+
+                    <span className="text-xs uppercase tracking-[0.3em] text-earth">
+                      {item.label}
+                    </span>
+                  </div>
                 </div>
-              );
-            })}
-          </div>
+              </Reveal>
+            );
+          })}
         </div>
-
-      </Reveal>
-
+      </div>
     </section>
   );
 }

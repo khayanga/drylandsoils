@@ -44,17 +44,20 @@ const Challenge = () => {
               <p className="text-sand/80 text-xs tracking-[0.3em] uppercase mb-6">
                 Why It Matters
               </p>
-              <h2 className="font-display text-[clamp(2rem,4.5vw,3.75rem)] leading-[1.05] text-balance">
-                Healthy soils are the foundation of food, livelihoods, and climate resilience.
+              <Reveal delay={100}>
+              <h2 className="font-display text-[clamp(2.3rem,5vw,4.8rem)] leading-[1.05]  md:max-w-lg text-balance">
+                Dryland soils are not only hungry
+                 but thirsty
               </h2>
+            </Reveal>
             </div>
           </Reveal>
           <Reveal delay={150}>
            <p className="text-cream/80 text-lg md:text-right leading-relaxed max-w-xl lg:justify-self-end">
   Dryland soils sustain millions of people, yet they face growing pressure
-  from land degradation, climate change, and unsustainable land use. By
+  from land degradation,limite rainfall  climate change, and unsustainable land use. By
   restoring soil health through science, farmer empowerment, and
-  agroecological practices, we can strengthen ecosystems, improve food
+  agroecological solutions, we can strengthen dryland ecosystems, improve food
   security, and build resilient communities for generations to come.
 </p>
           </Reveal>

@@ -20,7 +20,7 @@ const CTA = () => {
         </Reveal>
         <Reveal delay={120}>
           <h2 className="font-display text-[clamp(2.5rem,6vw,5.5rem)] leading-[0.98] text-balance">
-            Regenerate <em className=" text-sand">1,000 hectares</em> of degraded dryland soil by 2030.
+            Regenerate <span className=" text-sand">1,000 hectares</span> of degraded dryland soil by 2030.
           </h2>
         </Reveal>
         <Reveal delay={280}>
@@ -32,13 +32,13 @@ const CTA = () => {
         <Reveal delay={380}>
           <div className="mt-12 flex flex-wrap justify-center gap-4">
             <Link
-              href="/about#contact"
+              href="/services#contact"
               className="inline-flex items-center gap-2 bg-cream text-forest px-7 py-4 rounded-full text-sm font-medium hover:bg-sand transition-colors"
             >
               Partner with us <ArrowRight className="w-4 h-4" />
             </Link>
             <Link
-              href="/solutions"
+              href="/services"
               className="inline-flex items-center gap-2 border border-cream/40 text-cream px-7 py-4 rounded-full text-sm hover:bg-cream/10 transition-colors"
             >
               Explore solutions

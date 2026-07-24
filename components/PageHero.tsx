@@ -28,7 +28,7 @@ export default function PageHero({
           className="object-cover opacity-55 animate-slow-zoom"
         />
 
-        <div className="absolute inset-0 bg-linear-to-b from-ink/70 via-ink/60 to-ink" />
+        <div className="absolute inset-0 bg-ink/80" />
       </div>
 
       {/* Content */}

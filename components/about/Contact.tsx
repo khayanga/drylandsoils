@@ -1,334 +1,157 @@
-// import Image from "next/image";
-// import {
-//   ArrowRight,
-//   FlaskConical,
-//   GraduationCap,
-//   Handshake,
-//   Mail,
-//   MapPin,
-//   Phone,
-// } from "lucide-react";
-
-// const actions = [
-//   {
-//     icon: Handshake,
-//     title: "Partner With Us",
-//     description:
-//       "For NGOs, governments, and philanthropies ready to invest in soil restoration.",
-//   },
-//   {
-//     icon: FlaskConical,
-//     title: "Book Soil Testing",
-//     description:
-//       "Accredited laboratory and mobile diagnostics for farms and institutions.",
-//   },
-//   {
-//     icon: GraduationCap,
-//     title: "Request Training",
-//     description:
-//       "Bring our farmer field schools to your cooperative or community.",
-//   },
-// ];
-
-// export default function ContactSection() {
-//   return (
-//     <section
-//       id="contact"
-//       className="relative overflow-hidden bg-forest py-32 text-cream"
-//     >
-//       {/* Background */}
-//       <Image
-//         src="/soil-hands.jpg"
-//         alt="Healthy soil"
-//         fill
-//         className="object-cover opacity-20"
-//       />
-
-//       <div className="absolute inset-0 bg-linear-to-b from-forest/30 to-forest" />
-
-//       <div className="relative mx-auto max-w-7xl px-6 lg:px-10">
-//         {/* Heading */}
-//         <div className="mb-16 max-w-3xl">
-//           <p className="mb-6 text-xs uppercase tracking-[0.3em] text-sand">
-//             Contact Us
-//           </p>
-
-//           <h2 className="font-display text-[clamp(2.5rem,5vw,4.5rem)] leading-tight">
-//             Let's restore the future together.
-//           </h2>
-
-//           <p className="mt-6 max-w-2xl text-lg text-cream/80">
-//             Whether you're a farmer, policymaker, researcher, donor or
-//             development partner, we'd love to hear from you.
-//           </p>
-//         </div>
-
-//         <div className="grid gap-16 lg:grid-cols-2">
-//           {/* Left Side */}
-//           <div className="space-y-6">
-//             {actions.map((action) => {
-//               const Icon = action.icon;
-
-//               return (
-//                 <div
-//                   key={action.title}
-//                   className="rounded-3xl border border-white/10 bg-white/5 p-6 transition hover:bg-white/10"
-//                 >
-//                   <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-2xl bg-sand text-forest">
-//                     <Icon className="h-5 w-5" />
-//                   </div>
-
-//                   <h3 className="mb-2 font-display text-2xl">
-//                     {action.title}
-//                   </h3>
-
-//                   <p className="text-cream/75">
-//                     {action.description}
-//                   </p>
-//                 </div>
-//               );
-//             })}
-
-//             <div className="space-y-5 pt-8">
-//               <div className="flex items-center gap-3">
-//                 <Mail className="h-5 w-5 text-sand" />
-//                 <a href="mailto:hello@voiceofdrylandsoils.org">
-//                   hello@voiceofdrylandsoils.org
-//                 </a>
-//               </div>
-
-//               <div className="flex items-center gap-3">
-//                 <Phone className="h-5 w-5 text-sand" />
-//                 +254 20 000 0000
-//               </div>
-
-//               <div className="flex items-start gap-3">
-//                 <MapPin className="mt-1 h-5 w-5 text-sand" />
-//                 Karen Office Park, Nairobi, Kenya
-//               </div>
-//             </div>
-//           </div>
-
-//           {/* Contact Form */}
-//           <div className="rounded-3xl bg-cream p-8 text-foreground shadow-2xl">
-//             <h3 className="mb-8 font-display text-3xl">
-//               Send us a message
-//             </h3>
-
-//             <form className="space-y-6">
-//               <div>
-//                 <label className="mb-2 block text-sm font-medium">
-//                   Full Name
-//                 </label>
-
-//                 <input
-//                   type="text"
-//                   className="w-full rounded-xl border border-border bg-background px-4 py-3 outline-none focus:ring-2 focus:ring-forest"
-//                   placeholder="John Doe"
-//                 />
-//               </div>
-
-//               <div>
-//                 <label className="mb-2 block text-sm font-medium">
-//                   Email Address
-//                 </label>
-
-//                 <input
-//                   type="email"
-//                   className="w-full rounded-xl border border-border bg-background px-4 py-3 outline-none focus:ring-2 focus:ring-forest"
-//                   placeholder="john@example.com"
-//                 />
-//               </div>
-
-//               <div>
-//                 <label className="mb-2 block text-sm font-medium">
-//                   Subject
-//                 </label>
-
-//                 <input
-//                   type="text"
-//                   className="w-full rounded-xl border border-border bg-background px-4 py-3 outline-none focus:ring-2 focus:ring-forest"
-//                   placeholder="How can we help?"
-//                 />
-//               </div>
-
-//               <div>
-//                 <label className="mb-2 block text-sm font-medium">
-//                   Message
-//                 </label>
-
-//                 <textarea
-//                   rows={6}
-//                   className="w-full rounded-xl border border-border bg-background px-4 py-3 outline-none focus:ring-2 focus:ring-forest"
-//                   placeholder="Tell us about your project..."
-//                 />
-//               </div>
-
-//               <button
-//                 type="submit"
-//                 className="inline-flex items-center gap-2 rounded-full bg-forest px-8 py-4 text-cream transition hover:bg-earth"
-//               >
-//                 Send Message
-//                 <ArrowRight className="h-5 w-5" />
-//               </button>
-//             </form>
-//           </div>
-//         </div>
-//       </div>
-//     </section>
-//   );
-// }
-
-import Image from "next/image";
-import {
-  ArrowRight,
-  FlaskConical,
-  GraduationCap,
-  Handshake,
-} from "lucide-react";
-
-const actions = [
-  {
-    icon: Handshake,
-    title: "Strategic Partnerships",
-    description:
-      "Collaborate with us to restore Africa's drylands through scalable, evidence-based programmes.",
-  },
-  {
-    icon: FlaskConical,
-    title: "Research & Soil Diagnostics",
-    description:
-      "Access scientific soil testing, monitoring, and landscape intelligence.",
-  },
-  {
-    icon: GraduationCap,
-    title: "Training & Capacity Building",
-    description:
-      "Equip farmers, cooperatives and institutions with practical restoration skills.",
-  },
-];
+import { ArrowRight } from "lucide-react";
 
 export default function ContactSection() {
   return (
     <section
       id="contact"
-      className="relative overflow-hidden bg-forest py-32 md:py-40 text-cream"
+      className="relative overflow-hidden bg-cream py-32 md:py-40"
     >
-      {/* Background */}
-      <Image
-        src="/soil-hands.jpg"
-        alt=""
-        fill
-        priority={false}
-        className="object-cover opacity-15"
-      />
+      {/* Decorative Background */}
+      <div className="absolute inset-0 overflow-hidden">
+        {/* Left Glow */}
+        <div className="absolute -left-40 top-20 h-[32rem] w-[32rem] rounded-full bg-forest/5 blur-[130px]" />
 
-      {/* <div className="absolute inset-0 bg-gradient-to-b from-forest/50 via-forest/70 to-forest" /> */}
+        {/* Right Glow */}
+        <div className="absolute -right-40 bottom-10 h-[30rem] w-[30rem] rounded-full bg-earth/5 blur-[120px]" />
 
-      <div className="relative mx-auto max-w-7xl px-6 lg:px-10">
-        {/* Heading */}
+        {/* Floating Circles */}
+        <div className="absolute left-20 top-40 h-3 w-3 rounded-full bg-earth/20" />
+        <div className="absolute right-32 top-60 h-5 w-5 rounded-full bg-forest/10" />
+        <div className="absolute bottom-24 left-1/3 h-4 w-4 rounded-full bg-forest/10" />
 
-        <div className="mx-auto mb-20 max-w-3xl text-center">
-          <p className="mb-5 uppercase tracking-[0.35em] text-sand text-xs">
-            Let's Work Together
-          </p>
+        {/* Organic Rings */}
+        <div className="absolute right-20 top-24 h-64 w-64 rounded-full border border-earth/10" />
+        <div className="absolute right-32 top-36 h-40 w-40 rounded-full border border-earth/10" />
+      </div>
 
-          <h2 className="font-display text-[clamp(2.5rem,5vw,5rem)] leading-[1.02]">
-            Together we can regenerate
-            <span className="block text-sand">
-              Africa's dryland future.
-            </span>
+      <div className="relative mx-auto max-w-5xl px-6">
+        {/* Section Heading */}
+        <div className="mx-auto mb-16 text-center">
+          <span className="inline-flex items-center rounded-full border border-earth/20 bg-white px-5 py-2 text-xs font-semibold uppercase tracking-[0.3em] text-earth shadow-sm">
+            Let's Talk
+          </span>
+
+          <h2 className="mt-8 font-display text-[clamp(3rem,6vw,5.5rem)] leading-[0.95]">
+            Let's build healthier
+            <span className="block text-forest">soils together.</span>
           </h2>
 
-          <p className="mx-auto mt-8 max-w-2xl text-lg leading-relaxed text-cream/80">
-            Whether you're an investor, government, NGO, researcher or
-            community leader, we'd love to explore how we can create lasting
-            impact together.
+          <p className="mx-auto mt-8 max-w-2xl text-lg leading-8 text-muted-foreground">
+            Whether you're exploring a partnership, requesting soil diagnostics,
+            or looking to collaborate, we'd love to hear from you.
           </p>
+
+          <div className="mx-auto mt-10 h-px w-20 bg-earth/30" />
         </div>
 
-        <div className="grid gap-16 lg:grid-cols-2">
-          {/* Left */}
+        {/* Contact Card */}
+        <div className="relative">
+          {/* Background Glow */}
+          <div className="absolute inset-0 rounded-[2.5rem] bg-gradient-to-br from-forest/10 via-transparent to-earth/10 blur-2xl" />
 
-          <div className="space-y-5">
-            {actions.map((item) => {
-              const Icon = item.icon;
+          <div className="relative rounded-[2.5rem] border border-white bg-white/90 p-8 shadow-[0_30px_80px_rgba(0,0,0,.08)] backdrop-blur md:p-14">
+            {/* Form Intro */}
+            <div className="mb-10 border-b border-border pb-8">
+              <p className="text-xs font-semibold uppercase tracking-[0.3em] text-earth">
+                Contact Form
+              </p>
 
-              return (
-                <div
-                  key={item.title}
-                  className="group rounded-3xl border border-white/10 bg-white/5 backdrop-blur-sm p-7 transition-all duration-500 hover:-translate-y-1 hover:bg-white/10 hover:border-sand/40"
-                >
-                  <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-sand text-forest transition-transform duration-500 group-hover:rotate-6 group-hover:scale-110">
-                    <Icon className="h-6 w-6" />
-                  </div>
+              <h3 className="mt-3 font-display text-3xl text-ink">
+                Start the Conversation
+              </h3>
 
-                  <h3 className="mb-3 font-display text-2xl">
-                    {item.title}
-                  </h3>
+              <p className="mt-3 max-w-xl text-muted-foreground">
+                Whether you're a farmer, researcher, development partner, or
+                organization, we'd be delighted to discuss how we can work
+                together. Complete the form below and we'll respond within 48
+                hours.
+              </p>
+            </div>
 
-                  <p className="leading-relaxed text-cream/75">
-                    {item.description}
-                  </p>
+            <form className="space-y-6">
+              <div className="grid gap-6 md:grid-cols-2">
+                {/* Name */}
+                <div>
+                  <label
+                    htmlFor="name"
+                    className="mb-2 block text-sm font-medium text-ink"
+                  >
+                    Full Name
+                  </label>
+
+                  <input
+                    id="name"
+                    name="name"
+                    type="text"
+                    placeholder="John Doe"
+                    className="w-full rounded-2xl border border-border px-5 py-4 outline-none transition-all duration-300 focus:border-forest focus:ring-2 focus:ring-forest/10"
+                  />
                 </div>
-              );
-            })}
-          </div>
 
-          {/* Form */}
+                {/* Email */}
+                <div>
+                  <label
+                    htmlFor="email"
+                    className="mb-2 block text-sm font-medium text-ink"
+                  >
+                    Email Address
+                  </label>
 
-          <div className="rounded-[2rem] border border-white/10 bg-white/95 p-8 md:p-10 text-foreground shadow-[0_30px_80px_rgba(0,0,0,.25)]">
-            <h3 className="font-display text-3xl">
-              Start the conversation
-            </h3>
+                  <input
+                    id="email"
+                    name="email"
+                    type="email"
+                    placeholder="john@example.com"
+                    className="w-full rounded-2xl border border-border px-5 py-4 outline-none transition-all duration-300 focus:border-forest focus:ring-2 focus:ring-forest/10"
+                  />
+                </div>
+              </div>
 
-            <p className="mt-3 mb-8 text-muted-foreground">
-              Tell us a little about your organisation or project.
-            </p>
+              {/* Organization */}
+              <div>
+                <label
+                  htmlFor="organization"
+                  className="mb-2 block text-sm font-medium text-ink"
+                >
+                  Organization
+                  <span className="ml-1 font-normal text-muted-foreground">
+                    (Optional)
+                  </span>
+                </label>
 
-            <form className="space-y-5">
-              <div className="grid gap-5 md:grid-cols-2">
                 <input
+                  id="organization"
+                  name="organization"
                   type="text"
-                  placeholder="Full name"
-                  className="rounded-xl border border-border bg-background px-4 py-3 outline-none transition focus:border-forest focus:ring-2 focus:ring-forest/20"
-                />
-
-                <input
-                  type="email"
-                  placeholder="Email address"
-                  className="rounded-xl border border-border bg-background px-4 py-3 outline-none transition focus:border-forest focus:ring-2 focus:ring-forest/20"
+                  placeholder="Company or Institution"
+                  className="w-full rounded-2xl border border-border px-5 py-4 outline-none transition-all duration-300 focus:border-forest focus:ring-2 focus:ring-forest/10"
                 />
               </div>
 
-              <input
-                type="text"
-                placeholder="Organisation"
-                className="w-full rounded-xl border border-border bg-background px-4 py-3 outline-none transition focus:border-forest focus:ring-2 focus:ring-forest/20"
-              />
+              {/* Message */}
+              <div>
+                <label
+                  htmlFor="message"
+                  className="mb-2 block text-sm font-medium text-ink"
+                >
+                  Your Message
+                </label>
 
-              <select className="w-full rounded-xl border border-border bg-background px-4 py-3 outline-none transition focus:border-forest focus:ring-2 focus:ring-forest/20">
-                <option>I'm interested in...</option>
-                <option>Partnership</option>
-                <option>Investment</option>
-                <option>Soil Testing</option>
-                <option>Training</option>
-                <option>Research</option>
-                <option>Other</option>
-              </select>
-
-              <textarea
-                rows={6}
-                placeholder="Tell us about your project..."
-                className="w-full rounded-xl border border-border bg-background px-4 py-3 outline-none transition focus:border-forest focus:ring-2 focus:ring-forest/20"
-              />
+                <textarea
+                  id="message"
+                  name="message"
+                  rows={6}
+                  placeholder="Tell us about your project, partnership, research, or inquiry..."
+                  className="w-full resize-none rounded-2xl border border-border px-5 py-4 outline-none transition-all duration-300 focus:border-forest focus:ring-2 focus:ring-forest/10"
+                />
+              </div>
 
               <button
                 type="submit"
-                className="inline-flex items-center gap-2 rounded-full bg-forest px-8 py-4 text-cream transition-all hover:gap-3 hover:bg-earth"
+                className="group inline-flex items-center gap-3 rounded-full bg-forest px-8 py-4 font-medium text-white transition-all duration-300 hover:-translate-y-1 hover:bg-forest-dark"
               >
                 Send Message
-                <ArrowRight className="h-5 w-5" />
+                <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
               </button>
             </form>
           </div>

@@ -1,128 +1,143 @@
-import Image, { StaticImageData } from "next/image";
-import Link from "next/link";
-import { ArrowRight, LucideIcon } from "lucide-react";
+import {
+  Leaf,
+  Trees,
+  Bug,
+  Beef,
+  Tractor,
+  CheckCircle2,
+} from "lucide-react";
 import { Reveal } from "../Reveal";
 
-export type Service = {
-  id: string;
-  icon: LucideIcon;
-  title: string;
-  tagline: string;
-  body: string;
-  offerings: string[];
-  image: StaticImageData;
-};
+const solutions = [
+  {
+    icon: Leaf,
+    title: "Organic Fertilizer",
+    description:
+      "Rich in natural nutrients that improve soil fertility, strengthen crop growth, and support long-term soil health.",
+  },
+  {
+    icon: Trees,
+    title: "Biochar Soil Amendment",
+    description:
+      "Carbon-rich biochar that enhances water retention, improves nutrient availability, and restores degraded soils.",
+  },
+  {
+    icon: Bug,
+    title: "Frass Fertilizer",
+    description:
+      "An insect-based organic fertilizer packed with nutrients and beneficial microbes that stimulate healthy plant growth.",
+  },
+  {
+    icon: Beef,
+    title: "Animal Manure",
+    description:
+      "Well-decomposed manure that enriches soil organic matter, improves soil structure, and supports microbial life.",
+  },
+  {
+    icon: Tractor,
+    title: "Farmyard Manure",
+    description:
+      "A balanced organic amendment that restores soil fertility, improves moisture retention, and increases productivity.",
+  },
+];
 
-interface ServiceBlockProps {
-  service: Service;
-  index: number;
-}
+const benefits = [
+  "Improves Soil Fertility",
+  "Increases Water Retention",
+  "Healthier Root Development",
+  "Boosts Crop Productivity",
+  "Restores Soil Biology",
+  "Reduces Chemical Inputs",
+  "Supports Climate Resilience",
+  "Long-term Soil Health",
+];
 
-export default function ServiceBlock({
-  service,
-  index,
-}: ServiceBlockProps) {
-  const Icon = service.icon;
-  const flip = index % 2 === 1;
-
+export default function ServiceBlock() {
   return (
-    <section id={service.id} className="scroll-mt-24 py-24 md:py-32">
+    <section className="bg-white py-28 md:py-36">
       <div className="mx-auto max-w-7xl px-6 lg:px-10">
+
+        {/* Heading */}
+
         <Reveal>
-          <div
-            className={`grid items-center gap-16 lg:grid-cols-2 lg:gap-24 ${
-              flip ? "lg:[&>*:first-child]:order-2" : ""
-            }`}
-          >
-            {/* Image */}
-            <div className="group relative aspect-4/5 overflow-hidden rounded-4xl">
-              <Image
-                src={service.image}
-                alt={service.title}
-                fill
-                className="object-cover transition-transform duration-700 group-hover:scale-105"
-              />
+          <div className="mx-auto max-w-3xl text-center">
+            <p className="mb-5 text-xs font-semibold uppercase tracking-[0.35em] text-earth">
+              Our Agroecological Solutions
+            </p>
 
-              <div className="absolute inset-0 bg-linear-to-t from-black/75 via-black/20 to-transparent" />
+            <h2 className="font-display text-[clamp(2.5rem,5vw,4rem)] leading-[1.05]">
+              Nature-based solutions for
+              <span className="text-forest"> healthier soils.</span>
+            </h2>
 
-              <div className="absolute left-0 top-0 h-1 w-full bg-linear-to-r from-forest via-earth to-sand" />
+            <p className="mt-8 text-lg leading-8 text-muted-foreground">
+              Our agroecological solutions combine regenerative agriculture,
+              soil science, and locally available organic inputs to restore
+              degraded soils, improve productivity, and build resilient farming
+              systems across Africa's drylands.
+            </p>
+          </div>
+        </Reveal>
 
-              <div className="absolute bottom-8 left-8">
-                <div className="inline-flex items-center gap-3 rounded-full bg-white/15 px-5 py-3 backdrop-blur-md">
-                  <Icon className="h-5 w-5 text-white" />
+        {/* Solution Cards */}
 
-                  <span className="text-xs uppercase tracking-[0.3em] text-white">
-                    Voice of Dryland Soils
-                  </span>
+        <div className="mt-20 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+          {solutions.map((solution, index) => {
+            const Icon = solution.icon;
+
+            return (
+              <Reveal key={solution.title} delay={index * 100}>
+                <div className="group rounded-[2rem] border border-border bg-cream p-8 transition-all duration-500 hover:-translate-y-2 hover:border-forest/20 hover:shadow-[0_25px_60px_rgba(15,90,23,0.08)]">
+
+                  <div className="mb-8 flex h-14 w-14 items-center justify-center rounded-2xl bg-forest/10 text-forest transition-all duration-500 group-hover:bg-forest group-hover:text-white">
+                    <Icon className="h-6 w-6" strokeWidth={1.6} />
+                  </div>
+
+                  <h3 className="font-display text-2xl">
+                    {solution.title}
+                  </h3>
+
+                  <p className="mt-4 leading-7 text-muted-foreground">
+                    {solution.description}
+                  </p>
                 </div>
-              </div>
+              </Reveal>
+            );
+          })}
+        </div>
+
+        {/* Benefits */}
+
+        <Reveal delay={500}>
+          <div className="mt-24 rounded-[2.5rem] bg-forest p-10 md:p-14 text-cream">
+
+            <div className="mb-10 max-w-2xl">
+              <p className="mb-4 text-xs uppercase tracking-[0.35em] text-sand">
+                Outcomes
+              </p>
+
+              <h3 className="font-display text-4xl">
+                Why farmers choose these solutions.
+              </h3>
             </div>
 
-            {/* Content */}
-            <div>
-              <p className="mb-4 text-xs font-semibold uppercase tracking-[0.35em] text-earth">
-                {String(index + 1).padStart(2, "0")} · Service
-              </p>
-
-              <h2 className="font-display text-[clamp(2.4rem,4vw,4rem)] leading-[1.05] text-balance">
-                {service.title}
-              </h2>
-
-              <p className="mt-5 font-display text-xl italic text-earth">
-                {service.tagline}
-              </p>
-
-              <p className="mt-8 max-w-xl text-lg leading-8 text-muted-foreground">
-                {service.body}
-              </p>
-
-              {/* Offerings */}
-              <div className="mt-12 rounded-3xl border border-border bg-white p-8">
-                <h4 className="mb-6 text-xs font-semibold uppercase tracking-[0.35em] text-forest">
-                  What We Offer
-                </h4>
-
-                <ul className="space-y-5">
-                  {service.offerings.map((item) => (
-                    <li key={item} className="flex items-start gap-4">
-                      <span className="mt-2 h-2 w-2 shrink-0 rounded-full bg-forest" />
-
-                      <span className="leading-7 text-foreground/90">
-                        {item}
-                      </span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-              {/* Approach */}
-              <div className="mt-10 border-l-2 border-earth/30 pl-6">
-                <p className="text-sm font-semibold uppercase tracking-[0.3em] text-earth">
-                  Our Approach
-                </p>
-
-                <p className="mt-4 leading-8 text-muted-foreground">
-                  Every intervention is grounded in scientific evidence,
-                  practical farmer experience, and regenerative principles,
-                  ensuring solutions that are locally relevant, environmentally
-                  sustainable, and economically viable.
-                </p>
-              </div>
-
-              {/* CTA */}
-              <div className="mt-12">
-                <Link
-                  href="/solutions#contact"
-                  className="group inline-flex items-center gap-3 rounded-full bg-forest px-8 py-4 text-sm font-medium text-cream transition-all duration-300 hover:bg-earth"
+            <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+              {benefits.map((benefit) => (
+                <div
+                  key={benefit}
+                  className="flex items-center gap-3 rounded-2xl border border-white/10 bg-white/5 px-5 py-4 transition hover:bg-white/10"
                 >
-                  Request This Service
+                  <CheckCircle2 className="h-5 w-5 text-sand shrink-0" />
 
-                  <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
-                </Link>
-              </div>
+                  <span className="text-sm leading-6">
+                    {benefit}
+                  </span>
+                </div>
+              ))}
             </div>
           </div>
         </Reveal>
+
       </div>
     </section>
   );

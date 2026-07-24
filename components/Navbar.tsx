@@ -38,8 +38,8 @@ export default function Navbar({ overHero = false }: NavbarProps) {
       href: "/",
     },
     {
-      label: "Solutions",
-      href: "/solutions",
+      label: "services",
+      href: "/services",
     },
     // {
     //   label: "About & Impact",
@@ -90,7 +90,7 @@ export default function Navbar({ overHero = false }: NavbarProps) {
 
         {/* CTA */}
         <Link
-          href="/solutions#contact"
+          href="/services#contact"
           className={`hidden rounded-full px-5 py-2.5 text-sm transition-all md:inline-flex ${
             light
               ? "bg-cream/95 text-forest hover:bg-cream"
@@ -130,7 +130,7 @@ export default function Navbar({ overHero = false }: NavbarProps) {
             ))}
 
             <Link
-              href="/solutions#contact"
+              href="/services#contact"
               onClick={() => setOpen(false)}
               className="mt-2 inline-flex items-center justify-center rounded-full bg-forest px-5 py-2.5 text-cream"
             >

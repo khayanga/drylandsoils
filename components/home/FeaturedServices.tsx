@@ -36,93 +36,89 @@ const services = [
     icon: Sprout,
     title: "Agroecological Solutions",
     description:
-      "We design tailored soil restoration strategies using regenerative agriculture, agroecology, and organic soil management practices that rebuild healthy, productive, and climate-resilient landscapes.",
+      "We provide tailored soil restoration strategies using regenerative and agroecological solutions and organic soil management practices that restore degraded soils and improve farming systems in the dryland.",
   },
 ];
 
 export default function FeaturedServices() {
   return (
-    <section className="relative overflow-hidden bg-linear-to-b from-[#FAF8F5] to-[#F5F1EA]/40 py-28 md:py-40">
-      {/* Decorative Premium Glow Background */}
-      <div
-        className="absolute left-1/2 top-1/2 -z-10 h-150 w-150 -translate-x-1/2 -translate-y-1/2 rounded-full bg-radial from-forest/5 to-transparent blur-3xl pointer-events-none"
-        aria-hidden="true"
-      />
+        <section className="relative overflow-hidden bg-gradient-to-b from-[#FAF8F5] via-white to-[#F7F5F0] py-28 md:py-40">
+      {/* Background Glow */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute left-1/2 top-40 h-[34rem] w-[34rem] -translate-x-1/2 rounded-full bg-forest/5 blur-[140px]" />
+      </div>
 
-      <div className="mx-auto max-w-8xl px-6 xl:px-16">
-        <div className="mb-24 grid gap-10 lg:grid-cols-12 lg:items-center">
-          <div className="lg:col-span-7">
-            <Reveal>
-              <p className="mb-6 text-xs font-semibold uppercase tracking-[0.4em] text-earth/80">
-                What We Do
-              </p>
-            </Reveal>
+      <div className="relative mx-auto max-w-7xl px-6 lg:px-10">
+        {/* Heading */}
+        <div className="mx-auto mb-16 max-w-4xl text-center">
+          <Reveal>
+            <p className="mb-5 text-xs font-semibold uppercase tracking-[0.4em] text-earth">
+              What We Do
+            </p>
+          </Reveal>
 
-            <Reveal delay={120}>
-              <h2 className="font-display text-[clamp(2.5rem,4.5vw,4.5rem)] font-light leading-[1.1] tracking-tight text-neutral-900">
-                Restoring dryland soils through
-                <span className="text-forest font-normal"> science</span>,
-                <span className="text-forest font-normal"> knowledge</span>, and
-                <span className="text-forest font-normal">
-                  {" "}
-                  community action
-                </span>
-                .
-              </h2>
-            </Reveal>
-          </div>
+          <Reveal delay={100}>
+            <h2 className="font-display text-[clamp(2.75rem,5vw,4.8rem)] leading-[1.05] text-balance">
+              Restoring dryland soils through
+              <span className="text-forest"> science</span>,
+              <span className="text-forest"> knowledge</span>,
+              <br />
+              and
+              <span className="text-forest"> community action is our responsibility.</span>
+            </h2>
+          </Reveal>
 
-          <div className="lg:col-span-5 lg:pl-6">
-            <Reveal delay={220}>
-              <p className="max-w-xl text-base md:text-right leading-relaxed text-muted-foreground/90 md:text-lg font-light lg:border-l lg:border-earth/15 lg:pl-8">
-                Every healthy harvest begins beneath the surface. Through soil
-                science, advocacy, farmer education, and agroecological
-                innovation, we help communities regenerate degraded dryland
-                ecosystems while building resilient and profitable farming
-                systems.
-              </p>
-            </Reveal>
-          </div>
+          <Reveal delay={200}>
+            <p className="mx-auto mt-8 max-w-3xl text-lg leading-8 text-muted-foreground">
+              Every service we deliver is designed to regenerate landscapes,
+              strengthen farming communities, and create lasting environmental
+              and economic impact across Africa's drylands.
+            </p>
+          </Reveal>
         </div>
 
-        {/* Services Grid */}
-        <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
+        {/* Services */}
+        <div className="mx-auto grid max-w-6xl gap-8 lg:grid-cols-2">
           {services.map((service, index) => {
             const Icon = service.icon;
 
             return (
-              <Reveal key={service.title} delay={index * 100}>
+              <Reveal key={service.title} delay={index * 120}>
                 <Link
-                  href="/solutions"
-                  className="group relative flex h-full flex-col justify-between rounded-4xl border border-stone-200/60 bg-white/60 p-8 md:p-10 backdrop-blur-sm transition-all duration-500 ease-out hover:-translate-y-1.5 hover:border-forest/20 hover:bg-white hover:shadow-[0_20px_50px_rgba(40,78,54,0.04)]"
+                  href="/services"
+                  className="group flex h-full flex-col justify-between rounded-[2rem] border border-border/70 bg-white p-10 transition-all duration-500 hover:-translate-y-2 hover:border-forest/20 hover:shadow-[0_25px_60px_rgba(15,90,23,0.08)]"
                 >
                   <div>
-                    {/* Header: Number & Icon */}
+                    {/* Top */}
                     <div className="mb-10 flex items-center justify-between">
-                      <span className="font-mono text-sm tracking-widest text-stone-400 transition-colors duration-300 group-hover:text-earth">
+                      <span className="text-sm tracking-[0.35em] text-earth">
                         {service.number}
                       </span>
 
-                      <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-stone-100 text-stone-700 transition-all duration-500 ease-out group-hover:scale-110 group-hover:bg-forest group-hover:text-cream">
-                        <Icon className="h-5 w-5" strokeWidth={1.5} />
+                      <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-forest/10 text-forest transition-all duration-500 group-hover:scale-110 group-hover:bg-forest group-hover:text-cream">
+                        <Icon className="h-6 w-6" strokeWidth={1.6} />
                       </div>
                     </div>
 
                     {/* Title */}
-                    <h3 className="font-display text-2xl font-normal tracking-tight text-neutral-900 transition-colors duration-300 group-hover:text-forest">
+                    <h3 className="font-display text-3xl leading-tight transition-colors duration-300 group-hover:text-forest">
                       {service.title}
                     </h3>
 
                     {/* Description */}
-                    <p className="mt-4 text-[17px] leading-relaxed text-muted-foreground font-light">
+                    <p className="mt-5 text-base leading-8 text-muted-foreground">
                       {service.description}
                     </p>
                   </div>
 
-                  {/* CTA Link Indicator */}
-                  <div className="mt-10 inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-forest/80 transition-colors group-hover:text-forest">
-                    <span>Learn More</span>
-                    <ArrowRight className="h-3.5 w-3.5 transition-transform duration-300 ease-out group-hover:translate-x-1.5" />
+                  {/* Bottom */}
+                  <div className="mt-12 flex items-center">
+                    <div className="h-px flex-1 bg-border transition-all duration-300 group-hover:bg-forest/30" />
+
+                    <div className="ml-6 inline-flex items-center gap-2 text-sm font-medium text-forest">
+                      Learn More
+                      <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1.5" />
+                    </div>
                   </div>
                 </Link>
               </Reveal>
@@ -130,18 +126,19 @@ export default function FeaturedServices() {
           })}
         </div>
 
-        {/* Bottom CTA */}
-        <Reveal delay={500}>
+        {/* CTA */}
+        {/* <Reveal delay={500}>
           <div className="mt-20 flex justify-center">
             <Link
               href="/solutions"
-              className="group inline-flex items-center gap-3 rounded-full border border-forest bg-forest px-10 py-4.5 text-sm font-medium text-cream shadow-sm transition-all duration-300 hover:bg-transparent hover:text-forest"
+              className="group inline-flex items-center gap-3 rounded-full bg-forest px-10 py-4 text-sm font-medium text-cream transition-all duration-300 hover:scale-[1.02] hover:bg-forest/90"
             >
               Explore All Solutions
+
               <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
             </Link>
           </div>
-        </Reveal>
+        </Reveal> */}
       </div>
     </section>
   );

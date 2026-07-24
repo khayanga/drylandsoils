@@ -26,14 +26,14 @@ export default function Hero() {
         <div className="flex flex-1 items-center pt-32 pb-16">
           <div className="max-w-4xl">
             <p className="mb-6 animate-rise text-sm uppercase tracking-[0.28em] text-cream/80">
-              Africa · Regenerative Agriculture · Soil Science
+              Healthy Soils · Resilient Farms · Better future
             </p>
 
             <h1
               className="animate-rise font-display text-[clamp(2.75rem,7vw,6.5rem)] leading-[0.95] text-balance"
               style={{ animationDelay: "150ms" }}
             >
-          Potential of the{" "}
+          The Potenitial of {" "}
               
               Dryland Soils.
             </h1>
@@ -50,16 +50,16 @@ export default function Hero() {
               style={{ animationDelay: "500ms" }}
             >
               <Link
-                href="/solutions"
+                href="/sevices"
                 className="group inline-flex items-center gap-2 rounded-full bg-cream px-7 py-4 text-md font-medium text-forest transition-colors hover:bg-sand"
               >
-                Explore our solutions
+                Explore our services
 
                 <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
               </Link>
 
               <Link
-                href="/about#contact"
+                href="/services#contact"
                 className="inline-flex items-center gap-2 border rounded-full border-cream/40  px-7 py-4 text-md text-cream/90 transition-all hover:border-cream hover:text-cream"
               >
                 Join the movement
@@ -68,13 +68,7 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* <div className="flex items-end justify-between gap-6 pb-10 text-xs uppercase tracking-[0.24em] text-cream/75">
-          <span>Est. 2019 · Nairobi · Sahel · Horn of Africa</span>
-
-          <span className="hidden md:inline">
-            Scroll ↓
-          </span>
-        </div> */}
+        
       </div>
     </section>
   );
